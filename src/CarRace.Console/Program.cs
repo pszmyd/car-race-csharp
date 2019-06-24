@@ -11,8 +11,8 @@
             Race race = new Race();
             CreateVehicles(race);
 
-            race.SimulateRace();
-            race.PrintRaceResults();
+            //race.SimulateRace();
+            //race.PrintRaceResults();
         }
 
         /// <summary>

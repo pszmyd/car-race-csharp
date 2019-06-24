@@ -45,6 +45,14 @@ described here!
    MoveForAnHour() // The vehicle travels for an hour. It increases the distance traveled. Call this from the Race::SimulateRace() only!
 ```
 
-> Hints<br />
-  > Have you noticed that Car, Motorcycle and Truck share some similarities? Use inheritance to abstract away common parts.<br />
-  > Use the built-in Random class to generate random numbers. Implement a util class around it, if you find it useful.
+## Hints
+
+> Have you noticed that Car, Motorcycle and Truck share some similarities? Use inheritance to abstract away common parts.<br />
+> Use the built-in Random class to generate random numbers. Implement a util class around it, if you find it useful.
+
+## Static code analyzer for the sake of style guideline
+
+> <span style="color: red">WATCH OUT!</span> The project contains static code analyzer, named [StyleCop](https://github.com/StyleCop/StyleCop), which prevents you to successfully build your project in case of any violation of <br />
+> * naming
+> * commenting
+> * other style convention and guidance!
