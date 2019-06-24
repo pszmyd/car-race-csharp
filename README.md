@@ -10,7 +10,7 @@ free to add more methods/variables.  But you must implement the ones
 described here!
 
 ```csharp
-  Main
+  Program
    public static void Main(String[]) // The entry point of our program.
   
   Race
@@ -21,8 +21,7 @@ described here!
    boolean IsThereABrokenTruck() // returns true if there is a broken truck on track
 
   Weather
-   SetRaining() // 30% chance of rain.
-   booleanIsRaining() // is it raining currently.
+   boolean Raining // property which gives back is it raining or not. 30% chance of rain
 
   Car // If there is a broken down Truck on the track, then limit the max speed of cars to 75 km/h.
    NormalSpeed // the normal speed of the car. Set to a random number in the constructor between 80-110km/h.
@@ -48,5 +47,4 @@ described here!
 
 > Hints<br />
   > Have you noticed that Car, Motorcycle and Truck share some similarities? Use inheritance to abstract away common parts.<br />
-  > Use the built-in Random class to generate random numbers.
-  Implement a util class around it, if you find it useful.
+  > Use the built-in Random class to generate random numbers. Implement a util class around it, if you find it useful.
