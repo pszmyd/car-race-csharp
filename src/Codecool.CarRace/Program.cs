@@ -1,4 +1,4 @@
-﻿namespace CarRace.Console
+﻿namespace Codecool.CarRace
 {
     class Program
     {
@@ -8,7 +8,7 @@
         /// <param name="args">Commandline arguments passed to the program. It is unused!</param>
         static void Main(string[] args)
         {
-            Race race = new Race();
+            var race = new Race();
             CreateVehicles(race);
 
             //race.SimulateRace();
