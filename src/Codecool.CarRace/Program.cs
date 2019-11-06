@@ -1,4 +1,6 @@
-﻿namespace Codecool.CarRace
+﻿using System;
+
+namespace Codecool.CarRace
 {
     class Program
     {
@@ -10,6 +12,7 @@
         {
             var race = new Race();
             CreateVehicles(race);
+            Console.WriteLine(Util.GetCarName());
 
             //race.SimulateRace();
             //race.PrintRaceResults();
