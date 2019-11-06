@@ -6,7 +6,7 @@ namespace Codecool.CarRace
     {
         public static bool IsRaining ()
         {
-            return Util.ChanceCalculator(30);
+            return Util.PercentChanceCalculator(30);
         }
     }
 }

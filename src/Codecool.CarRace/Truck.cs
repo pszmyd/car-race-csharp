@@ -19,7 +19,7 @@ namespace Codecool.CarRace
         public void PrepareForLap()
         {
             int percent = 5;
-            IsBroken = Util.ChanceCalculator(percent);
+            IsBroken = Util.PercentChanceCalculator(percent);
             if (IsBroken)
             {
                 WaitingLaps = 2;
