@@ -12,6 +12,17 @@ namespace Codecool.CarRace
             Name = name;
             BreakDownTurnsLeft = 0;
         }
+        public int PrepareForLap()
+            
+        { int ReturnValue;
+            if (BreakDownTurnsLeft > 0)
+            { ReturnValue = 0; } 
+            else 
+            {ReturnValue =100; };
+            
+         return  ReturnValue;
+
+        }
 
 
     }

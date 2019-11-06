@@ -7,9 +7,7 @@ namespace Codecool.CarRace
         protected string Name { get; set; }
         public int DistanceTraveled { get; set; }
 
-        public void PrepareForLap(Race race)
-        {
-        }
+       
         public Race Race { get; set; }
        
     }
