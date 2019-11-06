@@ -1,10 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Codecool.CarRace
 {
-    class Truck
+    class Truck : Vehicle
     {
+        int BreakDownTurnsLeft;
+
+        Truck (string name )
+        {
+            DistanceTraveled = 0;
+            Name = name;
+            BreakDownTurnsLeft = 0;
+        }
+
+
     }
+
+
 }
