@@ -10,7 +10,7 @@ namespace Codecool.CarRace
         public void PrepareForLap(Race race)
         {
         }
-
-
+        public Race Race { get; set; }
+       
     }
 }
