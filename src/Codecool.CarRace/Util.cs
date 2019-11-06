@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Codecool.CarRace
 {
 
@@ -7,9 +8,10 @@ namespace Codecool.CarRace
     public static class Util
     {
         public static Random rnd = new Random();
+        
         public static int RandomNumber(int Lbound, int Ubound)
         {
-            return 1;
+            return rnd.Next(Lbound, Ubound);
         }
 
         public static int NameForTruck (int[] TruckList) // no repetitions in Names of Trucks with using rnd field from Random obj
@@ -19,9 +21,15 @@ namespace Codecool.CarRace
 
         public static bool ChanceCalculator(int chance)
         {
-            return true;
+            if(chance <= rnd.Next(100))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
-
     }
 }
