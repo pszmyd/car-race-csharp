@@ -12,6 +12,7 @@ namespace Codecool.CarRace
         {
             var race = new Race();
             CreateVehicles(race);
+            
         }
 
         /// <summary>
@@ -20,6 +21,7 @@ namespace Codecool.CarRace
         /// <param name="race">A <see cref="Race"/> instance.</param>
         public static void CreateVehicles(Race race)
         {
+            Car car = new Car(race, Util.GetCarName());
 
         }
     }

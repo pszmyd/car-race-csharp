@@ -19,7 +19,5 @@ namespace Codecool.CarRace
             { return 100 - Util.RandomNumber(5, 50); }
             { return 75; }
         }
-
-
     }
 }
