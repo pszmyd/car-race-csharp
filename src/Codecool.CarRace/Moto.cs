@@ -13,7 +13,10 @@ namespace Codecool.CarRace
             MotorcycleNumber += 1;
             Name = name;
         }
-
+        public int PrepareForLap()
+        {
+            return 100 - Util.RandomNumber(5, 50);
+        }
 
 
     }
