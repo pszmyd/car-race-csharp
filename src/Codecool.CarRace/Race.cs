@@ -18,7 +18,7 @@
 
         }
 
-        public static void PrinRaceResults ()
+        public static void PrintRaceResults ()
         {
 
         }
