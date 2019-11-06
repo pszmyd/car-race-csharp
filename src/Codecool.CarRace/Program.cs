@@ -1,4 +1,6 @@
-﻿namespace Codecool.CarRace
+﻿using System;
+
+namespace Codecool.CarRace
 {
     class Program
     {

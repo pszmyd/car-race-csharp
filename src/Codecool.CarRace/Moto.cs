@@ -15,7 +15,9 @@ namespace Codecool.CarRace
         }
         public int PrepareForLap()
         {
-            return 100 - Util.RandomNumber(5, 50);
+            if (Weather.IsRaining())
+            { return 100 - Util.RandomNumber(5, 50); }
+            { return 75; }
         }
 
 
