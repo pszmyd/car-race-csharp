@@ -32,27 +32,21 @@ namespace Codecool.CarRace
 
         }
 
-<<<<<<< HEAD
-        public static T[] JoiningArrays<T>(this T[] arr1, T[] arr2)
-        {
-            return [1,2]
-=======
         public static string GetCarName()
         {
             string[] carNamesList = System.IO.File.ReadAllLines(@"..\..\..\carknames.txt");
             StringBuilder carName = new StringBuilder();
             for (int i = 0; i < 2; i++)
             {
-                
+
                 int randNum = rnd.Next(carNamesList.Length);
                 carName.Append(carNamesList[randNum]);
                 carName.Append(" ");
 
-               
+
             }
 
             return carName.ToString().TrimEnd();
->>>>>>> c2af87ddfada49b18453b606c3d31a37abcd80a2
         }
     }
 }
