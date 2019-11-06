@@ -31,5 +31,10 @@ namespace Codecool.CarRace
             }
 
         }
+
+        public static T[] JoiningArrays<T>(this T[] arr1, T[] arr2)
+        {
+            return [1,2]
+        }
     }
 }
