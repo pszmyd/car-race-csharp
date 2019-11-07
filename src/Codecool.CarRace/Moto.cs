@@ -13,9 +13,9 @@ namespace Codecool.CarRace
             MotorcycleNumber += 1;
             Name = name;
         }
-        public int PrepareForLap()
+        public int PrepareForLap(bool ActualWeather)
         {
-            if (Weather.IsRaining())
+            if (ActualWeather)
             { return 100 - Util.RandomNumber(5, 50); }
             { return 75; }
         }

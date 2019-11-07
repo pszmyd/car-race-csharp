@@ -11,14 +11,12 @@ namespace Codecool.CarRace
             DistanceTraveled = 0;
             Name = name;
             IsBroken = false;
-            ActualSpeed = 100;
 
         }
         private bool IsBroken { get; set; }
         private int BreakdownsTurnsLeft { get; set; }
-        private int ActualSpeed { get; }
 
-        public void PrepareForLap()
+        public int PrepareForLap()
         {
             int percent = 5;
             IsBroken = Util.PercentChanceCalculator(percent);
@@ -26,16 +24,18 @@ namespace Codecool.CarRace
             {
                 BreakdownsTurnsLeft = 2;
                 Race.BrokenTrucksCounter(1);
+                return 0;
             }
             else if (BreakdownsTurnsLeft > 0)
             {
                 BreakdownsTurnsLeft--;
+                return 0;
             }
             else
             {
                 BreakdownsTurnsLeft = 0;
-                DistanceTraveled += ActualSpeed;
                 Race.BrokenTrucksCounter(-1);
+                return 100;
             }
         }
     }
