@@ -42,7 +42,7 @@ namespace Codecool.CarRace
         /// <returns>string full name (first ane surename)</returns>
         public static string GetCarName()
         {
-            string[] namesFromFile = System.IO.File.ReadAllLines(@"..\..\..\carknames.txt");
+            string[] namesFromFile = System.IO.File.ReadAllLines(@"../../../carknames.txt");
             StringBuilder carName = new StringBuilder();
             for (int i = 0; i < 2; i++)
             {
