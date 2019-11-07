@@ -9,14 +9,12 @@ namespace Codecool.CarRace
         {
 
             int speed;
-            if (Util.ChanceCalculator(5) is true)
+            if (Util.PercentChanceCalculator(5))
                 speed = 75;
             else
                 speed = NormalSpeed;
             return speed;
         }
-
-
         public Car(string name)
         {
             Name = name;
@@ -25,6 +23,4 @@ namespace Codecool.CarRace
 
         }
     }
-
-
 }

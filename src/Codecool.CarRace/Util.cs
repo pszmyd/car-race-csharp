@@ -9,19 +9,25 @@ namespace Codecool.CarRace
     {
         public static Random rnd = new Random();
 
+        /// <summary>
+        /// This function generates a random number between the given values
+        /// </summary>
+        /// <param name="Lbound">Low bound</param>
+        /// <param name="Ubound">High bound</param>
+        /// <returns>Random number between the given values</returns>
         public static int RandomNumber(int Lbound, int Ubound)
         {
             return rnd.Next(Lbound, Ubound);
         }
 
-        public static int NameForTruck(int[] TruckList) // no repetitions in Names of Trucks with using rnd field from Random obj
+        /// <summary>
+        /// This function calculates the probability of occurrence of a single event
+        /// </summary>
+        /// <param name="percent">Percent chance of occurrence of the event</param>
+        /// <returns>True if the event occurred, else false</returns>
+        public static bool PercentChanceCalculator(int percent)
         {
-            return rnd.Next(1001);
-        }
-
-        public static bool ChanceCalculator(int chance)
-        {
-            if (chance <= rnd.Next(100))
+            if (percent <= rnd.Next(100))
             {
                 return true;
             }
@@ -29,30 +35,22 @@ namespace Codecool.CarRace
             {
                 return false;
             }
-
         }
-
-<<<<<<< HEAD
-        public static T[] JoiningArrays<T>(this T[] arr1, T[] arr2)
-        {
-            return [1,2]
-=======
+        /// <summary>
+        /// This function generate random fake full name
+        /// </summary>
+        /// <returns>string full name (first ane surename)</returns>
         public static string GetCarName()
         {
-            string[] carNamesList = System.IO.File.ReadAllLines(@"..\..\..\carknames.txt");
+            string[] namesFromFile = System.IO.File.ReadAllLines(@"..\..\..\carknames.txt");
             StringBuilder carName = new StringBuilder();
             for (int i = 0; i < 2; i++)
             {
-                
-                int randNum = rnd.Next(carNamesList.Length);
-                carName.Append(carNamesList[randNum]);
+                int randNum = rnd.Next(namesFromFile.Length);
+                carName.Append(namesFromFile[randNum]);
                 carName.Append(" ");
-
-               
             }
-
             return carName.ToString().TrimEnd();
->>>>>>> c2af87ddfada49b18453b606c3d31a37abcd80a2
         }
     }
 }
