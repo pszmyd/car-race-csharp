@@ -4,7 +4,7 @@ namespace Codecool.CarRace
 {
     public class Truck : Vehicle
     {
-
+        public static int BrokenTrucks = 0;
         public Truck(string name)
 
         {
@@ -19,11 +19,12 @@ namespace Codecool.CarRace
         public int PrepareForLap()
         {
             int percent = 5;
-            IsBroken = Util.PercentChanceCalculator(percent);
-            if (IsBroken)
+            if (!IsBroken)
+                IsBroken = !(Util.PercentChanceCalculator(percent));
+            if (IsBroken && BreakdownsTurnsLeft == 0)
             {
                 BreakdownsTurnsLeft = 2;
-                Race.BrokenTrucksCounter(1);
+                BrokenTrucks += 1;
                 return 0;
             }
             else if (BreakdownsTurnsLeft > 0)
@@ -34,7 +35,7 @@ namespace Codecool.CarRace
             else
             {
                 BreakdownsTurnsLeft = 0;
-                Race.BrokenTrucksCounter(-1);
+                BrokenTrucks -= 1; ;
                 return 100;
             }
         }

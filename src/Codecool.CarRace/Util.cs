@@ -52,6 +52,12 @@ namespace Codecool.CarRace
             }
             return carName.ToString().TrimEnd();
         }
+
+        public static string GetMotoName()
+        {
+            string motoName = "Motorcycle" + Moto.MotorcycleNumber;
+            return motoName;
+        }
     }
 }
 

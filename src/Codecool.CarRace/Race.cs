@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 
 namespace Codecool.CarRace
 {
@@ -10,12 +10,10 @@ namespace Codecool.CarRace
 
         public Race()
         {
-            IsThereABrokenTruck = false;
-            BrokenTrucks = 0;
+
         }
-        public bool IsThereABrokenTruck { get; private set; }
         private int BrokenTrucks { get; set; }
-        public static int MoveForOneHour (int distance, int velocity)
+        public static int MoveForOneHour(int distance, int velocity)
 
         {
             return distance + velocity;
@@ -36,23 +34,17 @@ namespace Codecool.CarRace
             }
         }
 
-        public static void PrintRaceResults (Car[] cars, Moto[] motos, Truck[] trucks)
+        public static void PrintRaceResults(Car[] cars, Moto[] motos, Truck[] trucks)
         {
-            object[] results = Array.
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Car " + cars[i].Name + " " + cars[i].DistanceTraveled);
+                Console.WriteLine("Motorcycle " + motos[i].Name + " " + motos[i].DistanceTraveled);
+                Console.WriteLine("Truck " + trucks[i].Name + " " + trucks[i].DistanceTraveled);
+            }
         }
 
-        public void BrokenTrucksCounter (int status) 
-        {
-            BrokenTrucks += status;
-            if (BrokenTrucks > 0)
-            {
-                IsThereABrokenTruck = true;
-            }
-            else
-            {
-                IsThereABrokenTruck = false;
-            }
-        }
+
 
     }
 }

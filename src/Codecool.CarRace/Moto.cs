@@ -6,7 +6,7 @@ namespace Codecool.CarRace
 {
     public class Moto : Vehicle
     {
-        public static int MotorcycleNumber;
+        public static int MotorcycleNumber =0;
         public Moto(string name)
         {
             DistanceTraveled = 0;

@@ -9,10 +9,12 @@ namespace Codecool.CarRace
         {
 
             int speed;
-            if (Race.IsThereABrokenTruck)
+            if (Truck.BrokenTrucks>0)
+            {
                 speed = 75;
-            else
-                speed = NormalSpeed;
+            }                
+            else { speed = NormalSpeed; }
+                
             return speed;
         }
         public Car(string name)
