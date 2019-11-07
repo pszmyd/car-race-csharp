@@ -25,11 +25,11 @@ namespace Codecool.CarRace
         {
             for (int i = 1; i <= 50; i++)
             {
+                bool ActualWeather = Weather.IsRaining();
                 for (int j = 0; j < 10; j++)
                 {
-
                     cars[j].DistanceTraveled = MoveForOneHour(cars[j].DistanceTraveled, cars[j].PrepareForLap());
-                    motos[j].DistanceTraveled = MoveForOneHour(motos[j].DistanceTraveled, motos[j].PrepareForLap());
+                    motos[j].DistanceTraveled = MoveForOneHour(motos[j].DistanceTraveled, motos[j].PrepareForLap(ActualWeather));
                     trucks[j].DistanceTraveled = MoveForOneHour(trucks[j].DistanceTraveled, trucks[j].PrepareForLap());
 
                 }
