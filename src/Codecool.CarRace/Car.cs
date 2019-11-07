@@ -4,26 +4,20 @@ namespace Codecool.CarRace
 {
     public class Car : Vehicle
     {
-        public Car(Race race, string name)
+        public Car(string name)
         {
-            Name = name
-            DistanceTraveled = 0;
+            Name = name;
             NormalSpeed = Util.RandomNumber(80, 110);
         }
 
-
     public int NormalSpeed { get; set; }
-        public int PrepareForLap()
+        public void PrepareForLap(Race race)
         {
-
-            int speed;
-            if ()
-                speed = 75;
-            else
-                speed = NormalSpeed;
-            return speed;
+            Speed = NormalSpeed;
+            if (race.IsThereABrokenTruck)
+            {
+                Speed = 75;
+            }
         }
-        public Car(string name)
-
     }
 }

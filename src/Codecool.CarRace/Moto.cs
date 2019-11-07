@@ -4,20 +4,24 @@ using System.Text;
 
 namespace Codecool.CarRace
 {
-    class Moto : Vehicle
+    public class Moto : Vehicle
     {
-        public static int MotorcycleNumber;
-        Moto(string name)
+        public Moto(string name)
         {
-            DistanceTraveled = 0;
-            MotorcycleNumber += 1;
+            Speed = 100;
             Name = name;
         }
-        public int PrepareForLap()
+        public void PrepareForLap(Race race)
         {
+            
             if (Weather.IsRaining())
-            { return 100 - Util.RandomNumber(5, 50); }
-            { return 75; }
+            {
+                Speed -= Util.RandomNumber(5, 50);
+
+            } else
+            {
+                Speed = 100;
+            }
         }
     }
 }

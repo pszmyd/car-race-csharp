@@ -4,9 +4,14 @@ namespace Codecool.CarRace
 {
     public static class Weather
     {
-        public static bool IsRaining ()
+        private static bool Rain { get; set; }
+        public static bool IsRaining()
         {
-            return Util.PercentChanceCalculator(30);
+            return Rain;
+        }
+        public static void SetRaning()
+        {
+            Rain = Util.PercentChanceCalculator(30);
         }
     }
 }

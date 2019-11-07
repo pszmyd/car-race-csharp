@@ -2,39 +2,42 @@
 
 namespace Codecool.CarRace
 {
-    class Truck : Vehicle
+    public class Truck : Vehicle
     {
-        Truck(string name)
+        public Truck(string name)
         {
+            WaitingLaps = 0;
             DistanceTraveled = 0;
             Name = name;
             IsBroken = false;
-            ActualSpeed = 100;
-
+            Speed = 100;
         }
         private bool IsBroken { get; set; }
         private int WaitingLaps { get; set; }
-        private int ActualSpeed { get; }
 
-        public void PrepareForLap()
+        public void PrepareForLap(Race race)
         {
             int percent = 5;
-            IsBroken = Util.PercentChanceCalculator(percent);
-            if (IsBroken)
-            {
-                WaitingLaps = 2;
-                Race.BrokenTrucksCounter(1);
-            }
-            else if (WaitingLaps > 0)
+            
+            if (WaitingLaps > 0)
             {
                 WaitingLaps--;
-            }
-            else
+                if (WaitingLaps == 0)
+                {
+                    Speed = 100;
+                    IsBroken = false;
+                    race.BrokenTrucksCounter(-1);
+                }
+            } else
             {
-                WaitingLaps = 0;
-                DistanceTraveled += ActualSpeed;
-                Race.BrokenTrucksCounter(-1);
-            }
+                IsBroken = Util.PercentChanceCalculator(percent);
+                if (IsBroken)
+                {
+                    WaitingLaps = 2;
+                    Speed = 0;
+                    race.BrokenTrucksCounter(1);
+                }
+            }            
         }
     }
 }
