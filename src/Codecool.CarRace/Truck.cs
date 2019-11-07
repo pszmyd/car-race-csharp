@@ -2,11 +2,11 @@
 
 namespace Codecool.CarRace
 {
-    class Truck : Vehicle
+    public class Truck : Vehicle
     {
         int BreakDownTurnsLeft;
 
-        Truck (string name )
+        public Truck (string name )
         {
             DistanceTraveled = 0;
             Name = name;
