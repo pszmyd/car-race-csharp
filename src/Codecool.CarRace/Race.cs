@@ -7,21 +7,16 @@ namespace Codecool.CarRace
     /// </summary>
     public class Race
     {
-<<<<<<< HEAD
 
-        public int Velocity;
-
-        public static int MoveForOneHour (int distance, int velocity)
-=======
         public Race()
         {
             IsThereABrokenTruck = false;
-            BrockenTrucks = 0;
+            BrokenTrucks = 0;
         }
         public bool IsThereABrokenTruck { get; private set; }
-        private int BrockenTrucks { get; set; }
-        public static void MoveForOneHour ()
->>>>>>> 1931e9ea565b4df590df6486ba7942853d4f40c1
+        private int BrokenTrucks { get; set; }
+        public static int MoveForOneHour (int distance, int velocity)
+
         {
             return distance + velocity;
         }
@@ -48,8 +43,8 @@ namespace Codecool.CarRace
 
         public void BrokenTrucksCounter (int status) 
         {
-            BrockenTrucks += status;
-            if (BrockenTrucks > 0)
+            BrokenTrucks += status;
+            if (BrokenTrucks > 0)
             {
                 IsThereABrokenTruck = true;
             }
