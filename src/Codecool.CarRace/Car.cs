@@ -9,7 +9,7 @@ namespace Codecool.CarRace
         {
 
             int speed;
-            if (Util.PercentChanceCalculator(5))
+            if (Race.IsThereABrokenTruck)
                 speed = 75;
             else
                 speed = NormalSpeed;
