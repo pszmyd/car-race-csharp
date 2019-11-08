@@ -38,9 +38,10 @@ namespace Codecool.CarRace
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Car " + cars[i].Name + " " + cars[i].DistanceTraveled);
-                Console.WriteLine("Motorcycle " + motos[i].Name + " " + motos[i].DistanceTraveled);
-                Console.WriteLine("Truck " + trucks[i].Name + " " + trucks[i].DistanceTraveled);
+                Console.WriteLine("Vehicle: Car," + "Name: " + cars[i].Name + ", Distance: " + cars[i].DistanceTraveled);
+                Console.WriteLine("Vehicle: Motorcycle, " + "Name: " + motos[i].Name + ", Distance: " + motos[i].DistanceTraveled);
+                Console.WriteLine("Vehicle: Truck, " + "Name: " + trucks[i].Name + ", Distance: " + trucks[i].DistanceTraveled);
+                
             }
         }
 
