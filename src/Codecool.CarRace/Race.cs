@@ -8,18 +8,15 @@ namespace Codecool.CarRace
     public class Race
     {
 
-        public Race()
-        {
+        public int BrokenTrucks { get; set; }
 
-        }
-        private int BrokenTrucks { get; set; }
-        public static int MoveForOneHour(int distance, int velocity)
+        public int MoveForOneHour(int distance, int velocity)
 
         {
             return distance + velocity;
         }
 
-        public static void SimulateRace(Car[] cars, Moto[] motos, Truck[] trucks)
+        public void SimulateRace(Car[] cars, Moto[] motos, Truck[] trucks)
         {
             for (int i = 1; i <= 50; i++)
             {
@@ -34,7 +31,7 @@ namespace Codecool.CarRace
             }
         }
 
-        public static void PrintRaceResults(Car[] cars, Moto[] motos, Truck[] trucks)
+        public void PrintRaceResults(Car[] cars, Moto[] motos, Truck[] trucks)
         {
             for (int i = 0; i < 10; i++)
             {

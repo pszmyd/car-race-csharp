@@ -5,11 +5,20 @@ namespace Codecool.CarRace
     public class Car : Vehicle
     {
         public int NormalSpeed { get; set; }
+
+        public Car(string name, Race race) : base(race)
+        {
+            Name = name;
+            DistanceTraveled = 0;
+            NormalSpeed = Util.RandomNumber(80, 110);
+
+        }
+
         public int PrepareForLap()
         {
 
             int speed;
-            if (Truck.BrokenTrucks>0)
+            if (CurrentRace.BrokenTrucks > 0)
             {
                 speed = 75;
             }                
@@ -17,12 +26,6 @@ namespace Codecool.CarRace
                 
             return speed;
         }
-        public Car(string name)
-        {
-            Name = name;
-            DistanceTraveled = 0;
-            NormalSpeed = Util.RandomNumber(80, 110);
 
-        }
     }
 }

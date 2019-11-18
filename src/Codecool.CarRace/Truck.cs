@@ -4,8 +4,8 @@ namespace Codecool.CarRace
 {
     public class Truck : Vehicle
     {
-        public static int BrokenTrucks = 0;
-        public Truck(string name)
+        //public static int BrokenTrucks = 0;
+        public Truck(string name, Race race) : base(race)
 
         {
             DistanceTraveled = 0;
@@ -22,10 +22,26 @@ namespace Codecool.CarRace
             int percent = 5;
             if (!IsBroken)
                 IsBroken = !(Util.PercentChanceCalculator(percent));
+
+            switch(BreakdownsTurnsLeft)
+            {
+                case 0:
+                    if (IsBroken)
+                    {
+
+                    }
+                    break;
+                case 1:
+                    break;
+                case 2: 
+                    break;
+                default:
+                    break;
+            }
             if (IsBroken && BreakdownsTurnsLeft == 0) // Zepsuł się
             {
                 BreakdownsTurnsLeft = 2;
-                BrokenTrucks += 1;
+                CurrentRace.BrokenTrucks += 1;
                 return 0;
             }
             else if (!IsBroken && BreakdownsTurnsLeft == 0) // Jeździ
@@ -38,10 +54,9 @@ namespace Codecool.CarRace
                 return 0;
                
             }
-
             else // Rusza
             {
-                BrokenTrucks -= 1;
+                CurrentRace.BrokenTrucks -= 1;
                 BreakdownsTurnsLeft--;
                 return 0;
             }
